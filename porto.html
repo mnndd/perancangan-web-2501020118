@@ -1,71 +1,112 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Portfolio Zahra Dea Amanda</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zahra Dea Amanda - Portfolio</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Penghubung ke file style.css -->
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-    <h1 align="center">My Portfolio</h1>
+    <div class="container">
+        <header class="banner">PORTFOLIO</header>
 
-    <p align="center">
-        <img src="deaa.jpeg" alt="Zahra Dea Amanda" width="150px">
-    </p>
+        <!-- Sidebar Navigation -->
+        <nav class="sidebar left">
+            <a href="#profile" class="icon-btn"><div class="folder"></div><span>profile</span></a>
+            <a href="#skills" class="icon-btn"><div class="folder"></div><span>skills</span></a>
+        </nav>
+        <nav class="sidebar right">
+            <a href="#education" class="icon-btn"><div class="folder"></div><span>education</span></a>
+            <a href="#contact" class="icon-btn"><div class="folder"></div><span>contact</span></a>
+        </nav>
 
-    <h3 align="center">HELLO! I'M DEA</h3>
+        <!-- Window 1: Profile -->
+        <section id="profile" class="os-window">
+            <div class="win-header"><span>C:\DEA\profile</span></div>
+            <div class="win-body">
+                <div class="profile-content">
+                    <img src="dea.jpg" alt="Zahra" class="profile-img">
+                    <div class="profile-info">
+                        <h2>Zahra Dea Amanda</h2>
+                        <p>“I have no special talent. I am only passionately curious.”</p>
+                        <p style="font-size: 0.85rem; font-weight: 600;">— Albert Einstein</p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-    <p align="center">
-        Mahasiswa Teknik Informatika | NIM: 2501020118
-    </p>
+        <!-- Window 2: Skills -->
+        <section id="skills" class="os-window">
+            <div class="win-header"><span>C:\DEA\skills</span></div>
+            <div class="win-body">
+                <div class="skills-grid">
+                    <div class="skill-card">
+                        <h4>Programming</h4>
+                        <div class="tags"><span class="tag">C / C++</span></div>
+                    </div>
+                    <div class="skill-card">
+                        <h4>Web Dev</h4>
+                        <div class="tags"><span class="tag">HTML</span></div>
+                    </div>
+                    <div class="skill-card">
+                        <h4>Tools</h4>
+                        <div class="tags"><span class="tag">VS Code</span><span class="tag">Microsoft Word</span></div>
+                    </div>
+                    <div class="skill-card">
+                        <h4>Productivity</h4>
+                        <div class="tags"><span class="tag">Word</span><span class="tag">Reports</span></div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-    <hr>
+        <!-- Window 3: Education -->
+        <section id="education" class="os-window">
+            <div class="win-header"><span>C:\DEA\education</span></div>
+            <div class="win-body">
+                <div class="skills-grid">
+                    <div class="skill-card">
+                        <h4>SDIT As-Sakinah</h4>
+                        <p style="font-size: 0.78rem; color: var(--text-muted); margin-bottom: 0.4rem;">Tanjungpinang</p>
+                        <div class="tags"><span class="tag">2013 - 2019</span></div>
+                    </div>
+                    <div class="skill-card">
+                        <h4>SMPIT As-Sakinah</h4>
+                        <p style="font-size: 0.78rem; color: var(--text-muted); margin-bottom: 0.4rem;">Tanjungpinang</p>
+                        <div class="tags"><span class="tag">2019 - 2022</span></div>
+                    </div>
+                    <div class="skill-card">
+                        <h4>SMAIT Ulilalbab</h4>
+                        <p style="font-size: 0.78rem; color: var(--text-muted); margin-bottom: 0.4rem;">Batam</p>
+                        <div class="tags"><span class="tag">2022 - 2025</span></div>
+                    </div>
+                    <div class="skill-card">
+                        <h4>Universitas Maritim Raja Ali Haji</h4>
+                        <p style="font-size: 0.78rem; color: var(--text-muted); margin-bottom: 0.4rem;">Tanjungpinang</p>
+                        <div class="tags"><span class="tag">2025 - Sekarang</span></div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-    <h3>About Me</h3>
+        <!-- Window 4: Contact -->
+        <section id="contact" class="os-window">
+            <div class="win-header"><span>C:\DEA\contact</span></div>
+            <div class="win-body" style="text-align: center;">
+                <h4 style="font-family: 'Space Mono', monospace; margin-bottom: 0.5rem; color: var(--header-olive);">Let's Connect</h4>
+                <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 1rem;">Find me on Instagram or reach out via email.</p>
+                <div class="tags" style="justify-content: center;">
+                    <a href="https://instagram.com/deeamndaa" target="_blank" class="tag">@deeamndaa</a>
+                    <a href="mailto:2501020118@student.umrah.ac.id" target="_blank" class="tag">2501020118@student.umrah.ac.id</a>
+                </div>
+            </div>
+        </section>
 
-    <p align="justify">
-        Saya Zahra Dea Amanda, mahasiswa Teknik Informatika dengan NIM
-        2501020118 dari Universitas Maritim Raja Ali Haji. Saya tertarik dengan dunia teknologi, terutama
-        pemrograman, database, dan pengembangan website. Saya masih
-        terus belajar dan mencoba memahami berbagai hal di bidang IT
-        melalui tugas dan proyek perkuliahan. Saya juga suka mencoba
-        hal-hal baru dan mencari tahu sesuatu yang sebelumnya belum
-        saya pahami. Bagi saya, tidak harus langsung bisa semuanya,
-        yang penting mau belajar dan menikmati prosesnya. 
-    </p>
-
-    <h3>Skills</h3>
-
-    <ul>
-        <li>Basic Web Development</li>
-        <li>Microsoft Word</li>
-        <li>Website Design</li>
-        <li>Willingness to Learn</li>
-        <li>Basic Technology Skills</li>
-    </ul>
-
-    <h3>Education</h3>
-
-    <ul>
-        <li>SDIT As-Sakinah Tanjungpinang (2013-2019)</li>
-        <li>SMPIT As-Sakinah Tanjungpinang (2020-2022)</li>
-        <li>SMAIT Ulilalbab Batam (2023-2025)</li>
-        <li>Universitas Maritim Raja Ali Haji (2025-Sekarang)</li>
-    </ul>
-
-    <h3>Social Media</h3>
-
-    <ul>
-        Instagram:
-        <a href="https://instagram.com/deeamndaa">
-            @deeamndaa
-        </a>
-    </ul>
-
-    <hr>
-
-    <p align="center">
-        © 2026 Zahra Dea Amanda
-    </p>
+    </div>
 
 </body>
 </html>

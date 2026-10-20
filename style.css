@@ -1,0 +1,180 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+:root {
+    --bg-grid: #f6f3e7;
+    --grid-line: rgba(185, 178, 155, 0.25);
+    --header-olive: #5f6b52;
+    --window-bg: #fbf9f1;
+    --window-border: #333a2d;
+    --text-dark: #2c3327;
+    --text-muted: #646e5c;
+    --accent-lilac: #ddd6fe;
+    --accent-cream: #fffbeb;
+    --shadow: 4px 4px 0px rgba(44, 51, 39, 0.18);
+}
+body {
+    font-family: 'Quicksand', sans-serif;
+    background-color: var(--bg-grid);
+    background-image: linear-gradient(var(--grid-line) 1px, transparent 1px), linear-gradient(90deg, var(--grid-line) 1px, transparent 1px);
+    background-size: 24px 24px;
+    color: var(--text-dark);
+    min-height: 100vh;
+    padding: 2rem 1rem 4rem 1rem;
+    scroll-behavior: smooth;
+}
+.container { 
+    max-width: 850px; 
+    margin: 0 auto; 
+    display: flex; 
+    flex-direction: column; 
+    gap: 2rem; 
+    align-items: center; 
+}
+.banner { 
+    text-align: center; 
+    font-family: 'Space Mono', monospace; 
+    font-size: 2.2rem; 
+    font-weight: 700; 
+    color: var(--header-olive); 
+    letter-spacing: 3px; 
+}
+
+/* Sidebar Icons */
+.sidebar { 
+    position: fixed; 
+    top: 25%; 
+    display: flex; 
+    flex-direction: column; 
+    gap: 1.5rem; 
+    z-index: 50; 
+}
+.sidebar.left { left: 1.5rem; }
+.sidebar.right { right: 1.5rem; }
+.icon-btn { 
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    gap: 0.2rem; 
+    text-decoration: none; 
+    color: var(--text-dark); 
+    font-family: 'Space Mono', monospace; 
+    font-size: 0.7rem; 
+    font-weight: 700; 
+}
+.folder { 
+    width: 45px; 
+    height: 36px; 
+    background-color: #f0cb69; 
+    border: 2px solid var(--window-border); 
+    border-radius: 4px 6px 4px 4px; 
+    position: relative; 
+    box-shadow: 2px 2px 0px var(--window-border); 
+}
+.folder::before { 
+    content: ''; 
+    position: absolute; 
+    top: -5px; 
+    left: -2px; 
+    width: 18px; 
+    height: 7px; 
+    background-color: #d1ab45; 
+    border: 2px solid var(--window-border); 
+    border-bottom: none; 
+    border-radius: 3px 3px 0 0; 
+}
+
+/* Windows */
+.os-window { 
+    width: 100%; 
+    max-width: 620px; 
+    background-color: var(--window-bg); 
+    border: 2px solid var(--window-border); 
+    border-radius: 8px; 
+    box-shadow: 6px 6px 0px rgba(44, 51, 39, 0.12); 
+    overflow: hidden; 
+}
+.win-header { 
+    background-color: var(--header-olive); 
+    color: var(--accent-cream); 
+    padding: 0.5rem 1rem; 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    font-family: 'Space Mono', monospace; 
+    font-size: 0.8rem; 
+    font-weight: 700; 
+    border-bottom: 2px solid var(--window-border); 
+}
+.win-body { padding: 1.5rem; }
+
+/* Profile Content */
+.profile-content { 
+    display: flex; 
+    gap: 1.5rem; 
+    align-items: center; 
+}
+.profile-img { 
+    width: 110px; 
+    height: 110px; 
+    border-radius: 50%; 
+    object-fit: cover; 
+    border: 3px solid var(--window-border); 
+    background-color: var(--accent-lilac); 
+}
+.profile-info h2 { 
+    font-size: 1.4rem; 
+    color: #48523e; 
+    margin-bottom: 0.3rem; 
+}
+.profile-info p { 
+    font-size: 0.85rem; 
+    color: var(--text-muted); 
+    font-style: italic; 
+    margin-bottom: 0.8rem; 
+}
+.skills-grid { 
+    display: grid; 
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 1rem; 
+}
+.skill-card { 
+    background: white; 
+    border: 2px solid var(--window-border); 
+    border-radius: 6px; 
+    padding: 1rem; 
+    box-shadow: var(--shadow); 
+}
+.skill-card h4 { 
+    font-size: 0.9rem; 
+    margin-bottom: 0.4rem; 
+    font-family: 'Space Mono', monospace; 
+}
+.tags { 
+    display: flex; 
+    flex-wrap: wrap; 
+    gap: 0.3rem; 
+}
+.tag { 
+    font-size: 0.75rem; 
+    background: rgba(167, 139, 250, 0.15); 
+    padding: 0.2rem 0.5rem; 
+    border-radius: 4px; 
+    border: 1px dashed var(--header-olive); 
+    font-weight: 600; 
+    text-decoration: none; 
+    color: var(--text-dark); 
+    display: inline-block; 
+}
+
+@media(max-width: 768px) {
+    .sidebar { 
+        position: static; 
+        flex-direction: row; 
+        justify-content: center; 
+        margin-bottom: 1rem; 
+    }
+    .profile-content { 
+        flex-direction: column; 
+        text-align: center; 
+    }
+    .skills-grid { grid-template-columns: 1fr; }
+}
